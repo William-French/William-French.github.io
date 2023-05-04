@@ -1,0 +1,88 @@
+<html>
+  <head>
+
+
+    <title>Push Notification</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0, maximum-scale=1.0-ui" />
+    <meta name="theme-color" content="#ff4500">
+    
+
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-128.png">
+   
+    <style>
+      .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: right;
+        justify-content: right;
+      }
+      #enableNotifications {
+        height: 60px;
+        width: 250px;
+        background-color: black;
+        color: white;
+        border: 1px;
+        border-radius: 120px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+        <header>
+            <h1>JavaJam Coffee House</h1>
+        </header>
+        <nav> 
+        
+        
+        </nav>
+        <main>
+        
+            <h2>Relax at JavaJam!</h2>
+        <ul>
+          <li>Specialty Coffee and Tea</li>
+          <li>Bagels, Muffins, and Organic Snacks</li>
+          <li>Music and Poetry Readings</li>
+          <li>Open Mic Night</li>
+        </ul>
+        <div>
+        54321 Route 42<br>
+        Ellison Bay, WI 54210<br>
+        888-555-5555<br><br>
+        </div>
+        </main>
+        <footer>
+        <i>Copyright &copy; 2023 JavaJam Coffee House<br>
+        <a href="mailto:wfren064@cougarmail.cccc.edu">CougarMail</a> </i>
+        </footer>
+        </div>
+
+
+
+
+
+    <div class="container">
+      <button id="enableNotifications">🔔 Enable Notification</button>
+    </div>
+    <script src="scripts/main.js">
+
+
+
+if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js').then(reg => {
+                console.log('Successfully registered');
+            }).catch(err => {
+                console.log('Error while registering SW')
+            });
+        }
+    </script>
+  </body>
+</html>
